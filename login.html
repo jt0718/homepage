@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>상명대학교</title>
+<link href="/mbs/smuc/css/editor.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/mbs/smuc/js/jquery.js"></script>
+<script type="text/javascript">
+	$(function(){
+			$("ul.tab_c li:not("+$(".tab_w li a.on").attr("href")+")").hide();
+			$(".tab_w li a").click(function(){
+					$(".tab_w li a").removeClass("on");
+					$(this).addClass("on");
+					$("ul.tab_c li").hide();
+					$($(this).attr("href")).fadeIn();
+			});
+
+	});
+</script>
+<style type="text/css"></style>
+</head>
+
+<body>
+<div id="login">
+  <h1><img src="/mbs/smuc/images/sub/login_tit.jpg" alt="상명대학교 통합로그인" /></h1>
+  <ul class="tab_w">
+    <li><a href="#con01" class="on">인증서 로그인</a></li>
+    <li><a href="#con02">아이디 로그인</a></li>
+  </ul>
+  <ul class="tab_c">
+    <li id="con01"><a href="#self"><img src="/mbs/smuc/images/sub/tx_certi-login.jpg" alt="인증서 로그인 / 인증서 로그인 사용을 위해서는 아이디 로그인 이후 인증서 등록을 하셔야 합니다." /></a></li>
+    <li id="con02">
+      <div class="form">
+        <table class="tb_login">
+          <tr>
+            <td class="tx"><img src="/mbs/smuc/images/sub/tx_id.gif" alt="아이디" /></td>
+            <td><label for="textfield"></label>
+              <input type="text" name="textfield" id="textfield" /></td>
+            <td rowspan="2" class="btn"><a href="#self"><img src="/mbs/smuc/images/sub/bt_login.jpg" alt="" /></a></td>
+          </tr>
+          <tr>
+            <td class="tx"><img src="/mbs/smuc/images/sub/tx_pw.gif" alt="비밀번호" /></td>
+            <td><label for="textfield2"></label>
+              <input type="text" name="textfield2" id="textfield2" /></td>
+          </tr>
+        </table>
+      </div>
+    </li>
+  </ul>
+    
+  <div class="fot">copyright(c) 2013 Sangmyung University All Rights Reserved</div>
+</div>
+</body>
+</html>
